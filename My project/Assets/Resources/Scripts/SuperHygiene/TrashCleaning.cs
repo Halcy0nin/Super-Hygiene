@@ -8,10 +8,6 @@ public class TrashCleaning : MonoBehaviour
     private Vector3 originalPosition;
     private bool isDragging = false;
 
-    private void Start()
-    {
-        originalPosition = transform.position;
-    }
 
     private void OnMouseDown()
     {
