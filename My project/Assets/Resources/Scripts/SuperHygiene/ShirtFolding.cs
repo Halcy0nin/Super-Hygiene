@@ -1,124 +1,148 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
-public class ImageChangerWithSwipe : MonoBehaviour
+public class ShirtFolding : MonoBehaviour
 {
-    // Public properties to assign in the inspector
     public Sprite image1;
     public Sprite image2;
     public Sprite image3;
     public Sprite image4;
     public Sprite image5;
 
-    // Reference to the Image component of the prefab
     private Image imageComponent;
 
-    // Variables to track touch/swipe position
     private Vector2 touchStartPos;
     private Vector2 touchEndPos;
 
-    // Threshold for detecting swipe (change as needed)
     public float swipeThreshold = 100f;
 
-    // Flags to track if images 1-4 have been shown
     private bool image1Shown = false;
     private bool image2Shown = false;
     private bool image3Shown = false;
     private bool image4Shown = false;
+    private bool image5Shown = false;
+
+    // 🔄 Callback to notify when all steps are complete
+    public UnityAction onStepsComplete;
 
     void Start()
     {
-        // Get the Image component attached to this GameObject
         imageComponent = GetComponent<Image>();
 
-        // Only set the sprite to Image1 if the Image component is using the default sprite
+        // Only set Image1 if nothing is assigned (respect default Inspector sprite)
         if (imageComponent.sprite == null)
         {
-            imageComponent.sprite = image1;  // Set Image 1 as default if no sprite is assigned in the Inspector
+            imageComponent.sprite = image1;
         }
     }
 
     void Update()
     {
-        // Detect tap
-        if (Input.GetMouseButtonDown(0)) // Left-click or tap on screen
+        if (Input.GetMouseButtonDown(0))
         {
-            touchStartPos = Input.mousePosition; // Store starting touch position
-            HandleTap(); // Handle tap
+            touchStartPos = Input.mousePosition;
+            HandleTap();
         }
 
-        // Detect swipe or drag
-        if (Input.GetMouseButtonUp(0)) // When mouse button is released
+        if (Input.GetMouseButtonUp(0))
         {
-            touchEndPos = Input.mousePosition; // Store ending touch position
+            touchEndPos = Input.mousePosition;
 
-            // Calculate swipe distance
             float swipeDistance = touchEndPos.x - touchStartPos.x;
             float swipeVerticalDistance = touchEndPos.y - touchStartPos.y;
 
-            // Check for swipe
             if (Mathf.Abs(swipeDistance) > swipeThreshold)
             {
-                if (swipeDistance > 0 && image1Shown) // Right swipe and Image 1 has been shown
+                if (swipeDistance > 0 && image1Shown)
                 {
-                    ShowImage2(); // Show Image 2 on right swipe
+                    ShowImage2();
                 }
-                else if (swipeDistance < 0 && image2Shown) // Left swipe and Image 2 has been shown
+                else if (swipeDistance < 0 && image2Shown)
                 {
-                    ShowImage3(); // Show Image 3 on left swipe
+                    ShowImage3();
                 }
             }
-            else if (Mathf.Abs(swipeVerticalDistance) > swipeThreshold) // Vertical swipe
+            else if (Mathf.Abs(swipeVerticalDistance) > swipeThreshold)
             {
-                if (swipeVerticalDistance > 0 && image3Shown) // Up swipe and Image 3 has been shown
+                if (swipeVerticalDistance > 0 && image3Shown)
                 {
-                    ShowImage4(); // Show Image 4 on up swipe
+                    ShowImage4();
                 }
             }
         }
     }
 
-    // Handle tap logic
     void HandleTap()
     {
-        if (!image1Shown) // If Image 1 hasn't been shown yet
+        if (!image1Shown)
         {
             imageComponent.sprite = image1;
             image1Shown = true;
         }
-        else if (image1Shown && image2Shown && image3Shown && image4Shown) // If all 4 steps are done
+        else if (image1Shown && image2Shown && image3Shown && image4Shown && !image5Shown)
         {
             imageComponent.sprite = image5;
+            image5Shown = true;
+
+            // ✅ Notify the spawner that this shirt is finished
+            onStepsComplete?.Invoke();
         }
     }
 
-    // Show Image 2 on right swipe
     void ShowImage2()
     {
-        if (image1Shown && !image2Shown) // Only show Image 2 if Image 1 has been shown
+        if (image1Shown && !image2Shown)
         {
             imageComponent.sprite = image2;
             image2Shown = true;
         }
     }
 
-    // Show Image 3 on left swipe
     void ShowImage3()
     {
-        if (image2Shown && !image3Shown) // Only show Image 3 if Image 2 has been shown
+        if (image2Shown && !image3Shown)
         {
             imageComponent.sprite = image3;
             image3Shown = true;
         }
     }
 
-    // Show Image 4 on up swipe
     void ShowImage4()
     {
-        if (image3Shown && !image4Shown) // Only show Image 4 if Image 3 has been shown
+        if (image3Shown && !image4Shown)
         {
             imageComponent.sprite = image4;
             image4Shown = true;
         }
     }
+
+    // 🔄 Optional reset method (if reusing the same shirt object)
+    public void ResetSteps()
+    {
+        image1Shown = false;
+        image2Shown = false;
+        image3Shown = false;
+        image4Shown = false;
+        image5Shown = false;
+
+        imageComponent.sprite = null; // or set to a default
+    }
+
+    public void MoveShirtAside()
+    {
+        RectTransform rt = GetComponent<RectTransform>();
+        rt.anchoredPosition = new Vector2(-250, 0); // Move to the right side (adjust value as needed)
+    }
+
+    public void MoveShirtToStack(Transform stackParent, float offsetY)
+    {
+        transform.SetParent(stackParent); // Move shirt under stack area
+        RectTransform rt = GetComponent<RectTransform>();
+        rt.anchorMin = new Vector2(0.5f, 0f);
+        rt.anchorMax = new Vector2(0.5f, 0f);
+        rt.pivot = new Vector2(0.5f, 0f);
+        rt.anchoredPosition = new Vector2(0f, offsetY);
+    }
+
 }
