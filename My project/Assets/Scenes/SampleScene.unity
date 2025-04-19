@@ -589,7 +589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &202068820
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2279,6 +2279,10 @@ PrefabInstance:
     - target: {fileID: 1081644911233246440, guid: 07d7fef5a1319a545934f13a4aa91b12, type: 3}
       propertyPath: m_Name
       value: Can Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6234653966055904099, guid: 07d7fef5a1319a545934f13a4aa91b12, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7921463804623097692, guid: 07d7fef5a1319a545934f13a4aa91b12, type: 3}
       propertyPath: m_LocalScale.x
@@ -4725,6 +4729,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1430801165}
     m_Modifications:
+    - target: {fileID: 1182154925582588903, guid: 48305f7d501842d42b5e8141fc3b77af, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3477091503133944086, guid: 48305f7d501842d42b5e8141fc3b77af, type: 3}
       propertyPath: m_Name
       value: Paper
@@ -4739,11 +4747,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4048624957028831643, guid: 48305f7d501842d42b5e8141fc3b77af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -142.0492
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 4048624957028831643, guid: 48305f7d501842d42b5e8141fc3b77af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35.7679
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 4048624957028831643, guid: 48305f7d501842d42b5e8141fc3b77af, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4845,6 +4853,10 @@ PrefabInstance:
     - target: {fileID: 3878207740910166241, guid: a4580a147215ceb48901f47d42cd53f5, type: 3}
       propertyPath: m_Name
       value: Banana Peel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096858125301055696, guid: a4580a147215ceb48901f47d42cd53f5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
