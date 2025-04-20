@@ -2217,6 +2217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1582829632}
   - component: {fileID: 1582829633}
+  - component: {fileID: 1582829634}
   m_Layer: 0
   m_Name: SuperHygieneUI
   m_TagString: Untagged
@@ -2260,6 +2261,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirtMask: {fileID: 1988906932}
   continueButton: {fileID: 556314266}
+--- !u!114 &1582829634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582829631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ff0b880f11e5a43b6a9d68352130be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showerCharacter:
+  - {fileID: -2582210660857572780, guid: 7ab624236dcfbc14fab82bec15d624fe, type: 3}
+  - {fileID: 1962430598990531271, guid: 703da614dcebd124eae5d2876afdfc84, type: 3}
+  showerSpriteRenderer: {fileID: 499646844}
 --- !u!1 &1702296170
 GameObject:
   m_ObjectHideFlags: 0
