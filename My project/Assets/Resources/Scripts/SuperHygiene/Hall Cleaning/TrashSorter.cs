@@ -1,18 +1,35 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public string correctBinTag;
     private Vector3 startPosition;
     private Transform originalParent;
+    private CanvasGroup canvasGroup;
+
+    private void Awake()
+    {
+        canvasGroup = GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+        {
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
+        }
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         startPosition = transform.position;
         originalParent = transform.parent;
-        transform.SetParent(transform.root); // Bring it to the front
+        transform.SetParent(transform.root); // Bring to front
+
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 0.6f;
+            canvasGroup.blocksRaycasts = false;
+        }
 
         Debug.Log($"🟡 Begin drag: {gameObject.name} | Expected bin tag: {correctBinTag}");
     }
@@ -24,32 +41,42 @@ public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        GameObject hitObj = eventData.pointerEnter;
-        Transform target = hitObj?.transform;
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
 
-        Debug.Log($"🟡 Initial pointerEnter: {hitObj?.name} | Tag: {hitObj?.tag}");
+        GameObject hitBin = null;
 
-        // Traverse up the hierarchy until we find a tag that matches the correctBinTag
-        while (target != null && !target.CompareTag(correctBinTag))
+        foreach (var result in results)
         {
-            Debug.Log($"🔍 Checking parent: {target.name} | Tag: {target.tag}");
-            target = target.parent;
+            if (result.gameObject == gameObject) continue; // Skip self
+
+            Debug.Log($"🔎 Raycast hit: {result.gameObject.name} | Tag: {result.gameObject.tag}");
+
+            if (result.gameObject.CompareTag(correctBinTag) && result.gameObject.GetComponent<TrashSorter>() == null)
+            {
+                hitBin = result.gameObject;
+                break;
+            }
         }
 
-        if (target != null && target.CompareTag(correctBinTag))
+        if (hitBin != null)
         {
-            Debug.Log($"✅ Correct bin! {gameObject.name} dropped on {target.name} (Tag: {target.tag})");
+            Debug.Log($"✅ Correct bin! {gameObject.name} dropped on {hitBin.name} (Tag: {hitBin.tag})");
             gameObject.SetActive(false);
+            SortingCompletionChecker.Instance.CheckIfAllSorted();
         }
         else
         {
-            Debug.Log($"❌ Wrong bin! {gameObject.name} expected {correctBinTag}, but got {hitObj?.tag ?? "null"}");
+            Debug.Log($"❌ Wrong bin! {gameObject.name} expected {correctBinTag}");
             transform.position = startPosition;
         }
 
         transform.SetParent(originalParent);
+
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 1f;
+            canvasGroup.blocksRaycasts = true;
+        }
     }
-
-
-
 }
