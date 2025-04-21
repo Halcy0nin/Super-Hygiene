@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shirt-center_0: 5004889636890581610
+      shirt-center_1: -7615902672648074654
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
