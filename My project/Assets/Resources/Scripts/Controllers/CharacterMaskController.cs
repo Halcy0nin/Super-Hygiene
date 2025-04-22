@@ -1,27 +1,38 @@
 using UnityEngine;
-using UnityEngine.UI; // Needed for RawImage
+using UnityEngine.UI;
+using ScratchCard;
 
 public class CharacterMaskController : MonoBehaviour
 {
-    public Texture2D maleMask;
-    public Texture2D femaleMask;
+    public Texture2D maleMainTex;
+    public Texture2D femaleMainTex;
+
     public Material baseMaterial;
 
     private Material characterMaterial;
     private RawImage rawImage;
+    private ScratchCardMaskUGUI scratchCard;
 
     void Start()
     {
         rawImage = GetComponent<RawImage>();
+        scratchCard = GetComponent<ScratchCardMaskUGUI>();
+
         if (rawImage == null)
         {
             Debug.LogError("RawImage component not found on this GameObject.");
             return;
         }
 
+        if (scratchCard == null)
+        {
+            Debug.LogError("ScratchCardMaskUGUI component not found on this GameObject.");
+            return;
+        }
+
         if (baseMaterial != null)
         {
-            // Duplicate the material
+            // Duplicate the material to avoid modifying the original
             characterMaterial = new Material(baseMaterial);
             rawImage.material = characterMaterial;
 
@@ -39,16 +50,27 @@ public class CharacterMaskController : MonoBehaviour
 
         if (characterMaterial == null) return;
 
-        Texture2D chosenMask = (GameDataManager.heroGender == "M") ? maleMask : femaleMask;
+        Texture2D chosenMainTex = (GameDataManager.heroGender == "M") ? maleMainTex : femaleMainTex;
 
-        if (chosenMask != null)
+        if (chosenMainTex != null)
         {
-            characterMaterial.SetTexture("_MaskTex", chosenMask);
-            Debug.Log("Assigned mask: " + chosenMask.name);
+            characterMaterial.SetTexture("_MainTex", chosenMainTex);
+            rawImage.texture = chosenMainTex;
+            Debug.Log("Assigned main texture: " + chosenMainTex.name);
         }
         else
         {
-            Debug.LogWarning("Chosen mask texture is null!");
+            Debug.LogWarning("Chosen main texture is null!");
+        }
+
+        if (scratchCard.TargetTexture != null)
+        {
+            characterMaterial.SetTexture("_MaskTex", scratchCard.TargetTexture);
+            Debug.Log("Assigned RenderTexture mask");
+        }
+        else
+        {
+            Debug.LogWarning("ScratchCardMaskUGUI.TargetTexture is null!");
         }
     }
 }
