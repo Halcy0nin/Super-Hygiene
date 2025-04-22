@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: e0f32a7c7faa4e644ba09bf3f7a9575b
+guid: 1d8f28b1b1cf9f148952a5250bef3007
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7423802382355505756
-    second: 0dcffa52-b788-4a74-9ee2-2279245a3f2c_0
+      213: -3027742454724984110
+    second: Trash Sprites 2_0
+  - first:
+      213: 2525637322102577546
+    second: Trash Sprites 2_1
+  - first:
+      213: 1976958927415079247
+    second: Trash Sprites 2_2
+  - first:
+      213: 3811921397022036131
+    second: Trash Sprites 2_3
+  - first:
+      213: -1737791525136198519
+    second: Trash Sprites 2_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,150 +108,115 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Paper
+      name: Trash Sprites 2_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 297
-        width: 104
-        height: 66
+        x: 38
+        y: 209
+        width: 30
+        height: 25
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f520969c3caec3546a5bde9022a9254d
-      internalID: -1605526948
+      spriteID: 2d28fb2774c4bf5d0800000000000000
+      internalID: -3027742454724984110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pape
+      name: Trash Sprites 2_1
       rect:
         serializedVersion: 2
-        x: 397
-        y: 92
-        width: 104
-        height: 66
+        x: 285
+        y: 66
+        width: 37
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 931d0fefd9b0b7647acb8422d6bd5cac
-      internalID: 1489709278
+      spriteID: a89946753cddc0320800000000000000
+      internalID: 2525637322102577546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Banana Peel
+      name: Trash Sprites 2_2
       rect:
         serializedVersion: 2
-        x: 181
-        y: 22
-        width: 104
-        height: 66
+        x: 380
+        y: 13
+        width: 120
+        height: 55
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: afeed411238913f47b7cd1777fb595a6
-      internalID: -1202486596
+      spriteID: f41fc1c8ba19f6b10800000000000000
+      internalID: 1976958927415079247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Plastic
+      name: Trash Sprites 2_3
       rect:
         serializedVersion: 2
-        x: 562
-        y: 12
-        width: 205
-        height: 98
+        x: 546
+        y: 42
+        width: 61
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e4646a05ca1100e4889faf65280185ce
-      internalID: 1711160272
+      spriteID: 3a0953d605aa6e430800000000000000
+      internalID: 3811921397022036131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0dcffa52-b788-4a74-9ee2-2279245a3f2c_0
+      name: Trash Sprites 2_4
       rect:
         serializedVersion: 2
-        x: 397
-        y: 92
-        width: 104
-        height: 66
+        x: 129
+        y: 17
+        width: 47
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 68f3bed2e7951724a9804cdc5c5a32ee
-      internalID: -1462748505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Can Bottle
-      rect:
-        serializedVersion: 2
-        x: 811
-        y: 64
-        width: 108
-        height: 78
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b191eee8e53b86a489b4eb54bdf4e2e1
-      internalID: -2108889398
+      spriteID: 984929aa0df12e7e0800000000000000
+      internalID: -1737791525136198519
       vertices: []
       indices: 
       edges: []
@@ -248,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e059cd14aa552e34187b0cdbd776db2a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -257,13 +234,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      0dcffa52-b788-4a74-9ee2-2279245a3f2c_0: -1462748505
-      Banana Peel: -1202486596
-      Can Bottle: -2108889398
-      Pape: 1489709278
-      Paper: -1605526948
-      Plastic: 1711160272
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
