@@ -7,9 +7,8 @@ TagManager:
   - Biodegradable
   - Nonbiodegradable
   - Recyclable
-  - Go
-  - Grow
-  - Glow
+  - Healthy
+  - Unhealthy
   layers:
   - Default
   - TransparentFX

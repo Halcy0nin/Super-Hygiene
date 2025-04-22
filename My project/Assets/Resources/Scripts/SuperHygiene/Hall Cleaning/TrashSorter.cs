@@ -27,7 +27,7 @@ public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         if (canvasGroup != null)
         {
-            canvasGroup.alpha = 0.6f;
+            canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = false;
         }
 
