@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: d3662452e81f2bb4b97d330c88ea7712
+guid: 2a5a0a012726748439a2367f7f7bd473
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6919194877884806517
-    second: 131_0
+      213: -2879998834158931377
+    second: BASKET-J-removebg-preview_0
+  - first:
+      213: -5823360903438834799
+    second: BASKET-J-removebg-preview_1
+  - first:
+      213: -3233059639802414924
+    second: BASKET-J-removebg-preview_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +145,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 131_0
+      name: BASKET-J-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 7800
-        height: 4388
+        x: 52
+        y: 100
+        width: 207
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +160,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b8a49f30be41aff90800000000000000
-      internalID: -6919194877884806517
+      spriteID: f42fa68b1503808d0800000000000000
+      internalID: -2879998834158931377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BASKET-J-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 6
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19361af9c144f2fa0800000000000000
+      internalID: -5823360903438834799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BASKET-J-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 10
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8bce7136dd123d0800000000000000
+      internalID: -3233059639802414924
       vertices: []
       indices: 
       edges: []
@@ -173,8 +223,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      131_0: -6919194877884806517
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
