@@ -23,14 +23,12 @@ public class ShirtFolding : MonoBehaviour
     private bool image4Shown = false;
     private bool image5Shown = false;
 
-    // 🔄 Callback to notify when all steps are complete
     public UnityAction onStepsComplete;
 
     void Start()
     {
         imageComponent = GetComponent<Image>();
 
-        // Only set Image1 if nothing is assigned (respect default Inspector sprite)
         if (imageComponent.sprite == null)
         {
             imageComponent.sprite = image1;
@@ -39,6 +37,7 @@ public class ShirtFolding : MonoBehaviour
 
     void Update()
     {
+        // Desktop
         if (Input.GetMouseButtonDown(0))
         {
             touchStartPos = Input.mousePosition;
@@ -48,27 +47,55 @@ public class ShirtFolding : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             touchEndPos = Input.mousePosition;
+            DetectSwipeOrVertical();
+        }
 
-            float swipeDistance = touchEndPos.x - touchStartPos.x;
-            float swipeVerticalDistance = touchEndPos.y - touchStartPos.y;
+        // Mobile
+        if (Input.touchCount > 0)
+        {
+            HandleTouchInput();
+        }
+    }
 
-            if (Mathf.Abs(swipeDistance) > swipeThreshold)
+    void HandleTouchInput()
+    {
+        Touch touch = Input.GetTouch(0);
+
+        switch (touch.phase)
+        {
+            case TouchPhase.Began:
+                touchStartPos = touch.position;
+                HandleTap();
+                break;
+
+            case TouchPhase.Ended:
+                touchEndPos = touch.position;
+                DetectSwipeOrVertical();
+                break;
+        }
+    }
+
+    void DetectSwipeOrVertical()
+    {
+        float swipeDistanceX = touchEndPos.x - touchStartPos.x;
+        float swipeDistanceY = touchEndPos.y - touchStartPos.y;
+
+        if (Mathf.Abs(swipeDistanceX) > swipeThreshold)
+        {
+            if (swipeDistanceX > 0 && image1Shown)
             {
-                if (swipeDistance > 0 && image1Shown)
-                {
-                    ShowImage2();
-                }
-                else if (swipeDistance < 0 && image2Shown)
-                {
-                    ShowImage3();
-                }
+                ShowImage2(); // Swipe right
             }
-            else if (Mathf.Abs(swipeVerticalDistance) > swipeThreshold)
+            else if (swipeDistanceX < 0 && image2Shown)
             {
-                if (swipeVerticalDistance > 0 && image3Shown)
-                {
-                    ShowImage4();
-                }
+                ShowImage3(); // Swipe left
+            }
+        }
+        else if (Mathf.Abs(swipeDistanceY) > swipeThreshold)
+        {
+            if (swipeDistanceY > 0 && image3Shown)
+            {
+                ShowImage4(); // Swipe up
             }
         }
     }
@@ -84,9 +111,7 @@ public class ShirtFolding : MonoBehaviour
         {
             imageComponent.sprite = image5;
             image5Shown = true;
-
-            // ✅ Notify the spawner that this shirt is finished
-            onStepsComplete?.Invoke();
+            onStepsComplete?.Invoke(); // All done
         }
     }
 
@@ -117,7 +142,6 @@ public class ShirtFolding : MonoBehaviour
         }
     }
 
-    // 🔄 Optional reset method (if reusing the same shirt object)
     public void ResetSteps()
     {
         image1Shown = false;
@@ -126,23 +150,22 @@ public class ShirtFolding : MonoBehaviour
         image4Shown = false;
         image5Shown = false;
 
-        imageComponent.sprite = null; // or set to a default
+        imageComponent.sprite = null;
     }
 
     public void MoveShirtAside()
     {
         RectTransform rt = GetComponent<RectTransform>();
-        rt.anchoredPosition = new Vector2(-250, 0); // Move to the right side (adjust value as needed)
+        rt.anchoredPosition = new Vector2(-250, 0);
     }
 
     public void MoveShirtToStack(Transform stackParent, float offsetY)
     {
-        transform.SetParent(stackParent); // Move shirt under stack area
+        transform.SetParent(stackParent);
         RectTransform rt = GetComponent<RectTransform>();
         rt.anchorMin = new Vector2(0.5f, 0f);
         rt.anchorMax = new Vector2(0.5f, 0f);
         rt.pivot = new Vector2(0.5f, 0f);
         rt.anchoredPosition = new Vector2(0f, offsetY);
     }
-
 }

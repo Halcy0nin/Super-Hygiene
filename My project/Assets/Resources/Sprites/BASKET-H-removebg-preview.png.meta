@@ -223,7 +223,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BASKET-H-removebg-preview_0: 5780274014163166689
+      BASKET-H-removebg-preview_1: 6372642557197151978
+      BASKET-H-removebg-preview_2: -8700860537036394355
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

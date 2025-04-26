@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      girl-dirt_0: -1538000396872907005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

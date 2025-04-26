@@ -132,6 +132,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -434,7 +473,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Trash Sprites 1_0: 7635185452835238490
+      Trash Sprites 1_1: -2096765188725899598
+      Trash Sprites 1_10: 2199526334080890729
+      Trash Sprites 1_11: 3750853966017778936
+      Trash Sprites 1_12: -5718958468687691106
+      Trash Sprites 1_2: -3469225701893445619
+      Trash Sprites 1_3: -8742600997648113029
+      Trash Sprites 1_4: -1085596006082019467
+      Trash Sprites 1_5: -5797035844941274085
+      Trash Sprites 1_6: 3272054097758008772
+      Trash Sprites 1_7: -8903145081419555445
+      Trash Sprites 1_8: 2224491332567307701
+      Trash Sprites 1_9: -5342880747618107218
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
