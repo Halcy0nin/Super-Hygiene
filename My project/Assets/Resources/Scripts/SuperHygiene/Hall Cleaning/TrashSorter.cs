@@ -1,6 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -10,6 +10,9 @@ public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Transform originalParent;
     private CanvasGroup canvasGroup;
 
+    private Vector2 inputPosition;
+    private InputAction pointerMovementAction;
+
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -17,6 +20,33 @@ public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
+
+        // Create input action for pointer movement (mouse or touch)
+        pointerMovementAction = new InputAction("PointerMovement", InputActionType.Value, "<Pointer>/position");
+
+        // Enable the action
+        pointerMovementAction.Enable();
+    }
+
+    private void OnEnable()
+    {
+        // Bind action to callback
+        pointerMovementAction.performed += OnPointerMoved;
+    }
+
+    private void OnDisable()
+    {
+        // Unbind action when the script is disabled
+        pointerMovementAction.performed -= OnPointerMoved;
+
+        // Disable the action
+        pointerMovementAction.Disable();
+    }
+
+    private void OnPointerMoved(InputAction.CallbackContext context)
+    {
+        // Update the input position based on pointer (mouse or touch)
+        inputPosition = context.ReadValue<Vector2>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -36,12 +66,9 @@ public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnDrag(PointerEventData eventData)
     {
-        Vector3 screenPosition = Input.mousePosition;
-        screenPosition.z = 1f; // 👈 Important! Set this to a small positive number
-
-        // Convert screen position to world position using the UI camera
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
-        worldPosition.z = 0f; // 👈 Flatten to UI plane, or your Canvas plane depth if needed
+        // Use the new Input System position (works for both mouse and touch)
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(inputPosition.x, inputPosition.y, 1f));
+        worldPosition.z = 0f; // Flatten to UI plane
 
         transform.position = worldPosition;
 
