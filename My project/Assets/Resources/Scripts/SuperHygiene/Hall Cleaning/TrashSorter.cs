@@ -36,7 +36,16 @@ public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        Vector3 screenPosition = Input.mousePosition;
+        screenPosition.z = 1f; // 👈 Important! Set this to a small positive number
+
+        // Convert screen position to world position using the UI camera
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+        worldPosition.z = 0f; // 👈 Flatten to UI plane, or your Canvas plane depth if needed
+
+        transform.position = worldPosition;
+
+        transform.rotation = Quaternion.identity;
     }
 
     public void OnEndDrag(PointerEventData eventData)

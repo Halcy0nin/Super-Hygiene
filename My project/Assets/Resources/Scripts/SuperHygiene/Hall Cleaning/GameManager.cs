@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    
     public List<TrashData> collectedTrash = new List<TrashData>();
 
     void Awake()
@@ -19,5 +19,11 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void ClearCollectedTrash()
+    {
+        collectedTrash.Clear();
+        BootTracer.Log("Collected trash list cleared.");
     }
 }

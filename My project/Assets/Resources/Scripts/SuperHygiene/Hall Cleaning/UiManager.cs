@@ -31,12 +31,13 @@ public class UiManager : MonoBehaviour
 
             var sorter = obj.GetComponent<TrashSorter>();
             sorter.enabled = true;
-            obj.GetComponent<TrashTapHandler>().enabled = false;
+            TrashTapHandler tapHandler = obj.GetComponent<TrashTapHandler>();
+            if (tapHandler != null) tapHandler.enabled = false;
             sorter.correctBinTag = trash.category.ToString();
 
             // ✅ Assign the tag here based on correctBinTag
             obj.tag = sorter.correctBinTag;
-
+            Debug.Log($"Spawning trash: {trash.trashName} | Sprite: {trash.trashSprite?.name} | Category: {trash.category}");
         }
     }
 
