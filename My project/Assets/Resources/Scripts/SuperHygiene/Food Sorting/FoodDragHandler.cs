@@ -5,10 +5,12 @@ public class FoodDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 {
     public Canvas canvas;
     public string correctCategory; // "Go", "Glow", or "Grow"
-
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-    private Vector3 originalPosition;
+    public Vector3 originalPosition;
+
+    // Reference to FoodSortingManager
+    public FoodSortingManager sortingManager;
 
     private void Awake()
     {
@@ -36,7 +38,9 @@ public class FoodDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (hitObject != null && hitObject.CompareTag(correctCategory))
         {
             Debug.Log($"{gameObject.name} sorted correctly into {correctCategory} bin.");
-            gameObject.SetActive(false); // or Destroy(gameObject)
+            gameObject.SetActive(false);
+
+            sortingManager.CheckAllFoodSorted();
         }
         else
         {

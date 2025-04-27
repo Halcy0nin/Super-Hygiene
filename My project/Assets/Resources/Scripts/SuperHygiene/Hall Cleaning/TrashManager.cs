@@ -4,21 +4,20 @@ using System.Collections.Generic;
 
 public class TrashManager : MonoBehaviour
 {
-    public GameObject[] trashPrefabs; // Prefabs with assigned categories
-    public Transform[] trashSlots;    // Fixed positions for trash
+    public GameObject[] trashPrefabs;
+    public Transform[] trashSlots;   
     public Button proceedButton;
 
     private int trashCleaned = 0;
-    private int totalTrash = 5;
+    private int totalTrash = 6;
 
     void Start()
     {
         BootTracer.Log("TrashManager Start()");
-        proceedButton.gameObject.SetActive(false);
-        SpawnTrash();
+        trashCleaned = 0;
     }
 
-   void SpawnTrash()
+    public void SpawnTrash()
     {
         BootTracer.Log("SpawnTrash() started");
 
@@ -76,4 +75,22 @@ public class TrashManager : MonoBehaviour
             proceedButton.gameObject.SetActive(true);
         }
     }
+    public void ClearTrashFromSlots()
+    {
+        BootTracer.Log("Clearing trash from slots");
+
+        foreach (Transform slot in trashSlots)
+        {
+            if (slot.childCount > 0)
+            {
+                foreach (Transform child in slot)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+        }
+        trashCleaned = 0;
+        proceedButton.gameObject.SetActive(false);
+    }
+
 }
