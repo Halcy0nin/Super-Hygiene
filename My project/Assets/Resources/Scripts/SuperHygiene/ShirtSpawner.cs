@@ -31,52 +31,70 @@ public class ShirtSpawner : MonoBehaviour
 
 
    public void SpawnNextShirt()
-{
-    // Move the last active shirt aside
-    if (activeShirt != null)
     {
-        ShirtFolding lastLogic = activeShirt.GetComponent<ShirtFolding>();
-        if (lastLogic != null)
+        // Move the last active shirt aside
+        if (activeShirt != null)
         {
-            lastLogic.MoveShirtToStack(shirtStackParent, stackedShirtCount * stackOffsetY);
-            stackedShirtCount++;
+            ShirtFolding lastLogic = activeShirt.GetComponent<ShirtFolding>();
+            if (lastLogic != null)
+            {
+                lastLogic.MoveShirtToStack(shirtStackParent, stackedShirtCount * stackOffsetY);
+                stackedShirtCount++;
+                if (stackedShirtCount >= 5)
+                    {
+                        ShowButton(continueButton);
+                    }
+            }
+        }
 
+        if (currentShirtIndex >= shirtColors.Count)
+        {
+            Debug.Log("All shirts completed!");
+            continueButton.gameObject.SetActive(true);
+            return;
+        }
+
+        // Spawn shirt
+        activeShirt = Instantiate(shirtPrefab, spawnParent);
+
+        // Setup RectTransform
+        RectTransform rt = activeShirt.GetComponent<RectTransform>();
+        rt.anchorMin = new Vector2(0.5f, 0.5f);
+        rt.anchorMax = new Vector2(0.5f, 0.5f);
+        rt.pivot = new Vector2(0.5f, 0.5f);
+        rt.anchoredPosition = Vector2.zero;
+        rt.sizeDelta = new Vector2(259, 200); // Adjust as needed
+
+        // Set color and default sprite
+        Image img = activeShirt.GetComponent<Image>();
+        img.color = shirtColors[currentShirtIndex];
+        img.sprite = imageDefault;
+
+        // Attach folding logic
+        ShirtFolding logic = activeShirt.GetComponent<ShirtFolding>();
+        if (logic == null)
+        {
+            logic = activeShirt.AddComponent<ShirtFolding>();
+        }
+
+        logic.image1 = image1;
+        logic.image2 = image2;
+        logic.image3 = image3;
+        logic.image4 = image4;
+        logic.image5 = image5;
+        logic.onStepsComplete = SpawnNextShirt;
+
+        currentShirtIndex++;
+    }
+    public void ShowButton(Button targetButton)
+    {
+        if (targetButton != null)
+        {
+            targetButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("No button assigned to show.");
         }
     }
-
-    if (currentShirtIndex >= shirtColors.Count)
-    {
-        Debug.Log("All shirts completed!");
-        continueButton.gameObject.SetActive(true);
-        return;
-    }
-
-    // Spawn shirt
-    activeShirt = Instantiate(shirtPrefab, spawnParent);
-
-    // Setup RectTransform
-    RectTransform rt = activeShirt.GetComponent<RectTransform>();
-    rt.anchorMin = new Vector2(0.5f, 0.5f);
-    rt.anchorMax = new Vector2(0.5f, 0.5f);
-    rt.pivot = new Vector2(0.5f, 0.5f);
-    rt.anchoredPosition = Vector2.zero;
-    rt.sizeDelta = new Vector2(259, 200); // Adjust as needed
-
-    // Set color and default sprite
-    Image img = activeShirt.GetComponent<Image>();
-    img.color = shirtColors[currentShirtIndex];
-    img.sprite = imageDefault;
-
-    // Attach folding logic
-    ShirtFolding logic = activeShirt.AddComponent<ShirtFolding>();
-    logic.image1 = image1;
-    logic.image2 = image2;
-    logic.image3 = image3;
-    logic.image4 = image4;
-    logic.image5 = image5;
-    logic.onStepsComplete = SpawnNextShirt;
-
-    currentShirtIndex++;
-}
-
 }  
