@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 63960ce4ae8e1a1418b3bacff07c2bee
+guid: 1c77c4395cac69e46b5741ed8bfad28d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8722683205363965157
-    second: Super Hygiene App Icon_0
+      213: -7512151853844245964
+    second: tap_0
+  - first:
+      213: -3311114313877805598
+    second: tap_1
+  - first:
+      213: 8625413620784915326
+    second: tap_2
+  - first:
+      213: -2483037832402444650
+    second: tap_3
+  - first:
+      213: -8933229307670281325
+    second: tap_4
+  - first:
+      213: -3378162012957641416
+    second: tap_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Super Hygiene App Icon_0
+      name: tap_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 27
+        y: 450
+        width: 36
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +169,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b13e308e6ddc2f680800000000000000
-      internalID: -8722683205363965157
+      spriteID: 43252d4a0b97fb790800000000000000
+      internalID: -7512151853844245964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tap_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 467
+        width: 11
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e52a96131f8c02d0800000000000000
+      internalID: -3311114313877805598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tap_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 450
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7363bb1dff93b770800000000000000
+      internalID: 8625413620784915326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tap_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 406
+        width: 46
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69edbc34f3a7a8dd0800000000000000
+      internalID: -2483037832402444650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tap_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 444
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3934433664bc60480800000000000000
+      internalID: -8933229307670281325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tap_5
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 339
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835f0f72c8b5e11d0800000000000000
+      internalID: -3378162012957641416
       vertices: []
       indices: 
       edges: []
@@ -164,7 +289,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +299,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Super Hygiene App Icon_0: -8722683205363965157
+      tap_0: -7512151853844245964
+      tap_1: -3311114313877805598
+      tap_2: 8625413620784915326
+      tap_3: -2483037832402444650
+      tap_4: -8933229307670281325
+      tap_5: -3378162012957641416
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

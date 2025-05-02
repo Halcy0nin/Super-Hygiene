@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 63960ce4ae8e1a1418b3bacff07c2bee
+guid: 722c62c99df9b3d4d806a25590934c97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8722683205363965157
-    second: Super Hygiene App Icon_0
+      213: -5142331381437254216
+    second: swipe-up_0
+  - first:
+      213: 4299761378910394288
+    second: swipe-up_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -139,12 +142,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Super Hygiene App Icon_0
+      name: swipe-up_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 61
+        y: 336
+        width: 84
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5b6149ad4c2a8b0800000000000000
+      internalID: -5142331381437254216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swipe-up_1
+      rect:
+        serializedVersion: 2
+        x: 122
         y: 0
-        width: 512
+        width: 329
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b13e308e6ddc2f680800000000000000
-      internalID: -8722683205363965157
+      spriteID: 0b7d5e86132dbab30800000000000000
+      internalID: 4299761378910394288
       vertices: []
       indices: 
       edges: []
@@ -164,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Super Hygiene App Icon_0: -8722683205363965157
+      swipe-up_0: -5142331381437254216
+      swipe-up_1: 4299761378910394288
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
