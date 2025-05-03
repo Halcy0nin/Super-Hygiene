@@ -17,55 +17,51 @@ public class TutorialTracker : MonoBehaviour
     // Reference to the GameSelectUI
     public GameObject gameSelectUI;
 
+    // Internal flag to prevent multiple UI triggers
+    private bool finalUIShown = false;
+
     private void Start()
     {
-        // Add listeners to all buttons in the array
+        // Add listeners to all tutorial buttons
         foreach (Button button in tutorialButtons)
         {
             button.onClick.AddListener(OnTutorialButtonPressed);
         }
 
-        // Hide final tutorial UI initially
+        // Ensure the final UI is hidden at the start
         finalTutorialUI.SetActive(false);
     }
 
     private void OnTutorialButtonPressed()
     {
-        // Increment tutorial progress when a button is pressed
+        // Increment tutorial progress
         tutorialProgress++;
-
-        // Debugging progress
         Debug.Log("Tutorial Progress: " + tutorialProgress);
+    }
 
-        // Check if progress reaches 3 and gameSelectUI is active
-        if (tutorialProgress >= 3)
+    private void Update()
+    {
+        // Continuously check if conditions are met to show final tutorial UI
+        if (!finalUIShown && tutorialProgress >= 3 && gameSelectUI.activeSelf)
         {
-            Debug.Log("Tutorial Progress Reached 3!");
-
-            if (gameSelectUI.activeSelf)
-            {
-                Debug.Log("GameSelectUI is active. Showing final tutorial UI.");
-                ShowFinalTutorialUI();
-            }
-            else
-            {
-                Debug.Log("GameSelectUI is not active. Wait for it to be active.");
-            }
+            Debug.Log("Tutorial complete and GameSelectUI is active. Showing final tutorial UI.");
+            ShowFinalTutorialUI();
+            finalUIShown = true;
         }
     }
 
     private void ShowFinalTutorialUI()
     {
-        // Show the final tutorial UI and the button to proceed to the next scene
+        // Display final tutorial screen
         finalTutorialUI.SetActive(true);
 
-        // Add listener to the next scene button
+        // Assign scene load to next button
         nextSceneButton.onClick.AddListener(LoadNextScene);
     }
 
     private void LoadNextScene()
     {
-        // Load the next scene (replace with your scene loading logic)
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        // Load your next scene here
+        SceneManager.LoadScene("Main"); // Replace "Main" with your actual scene name
     }
 }
