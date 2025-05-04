@@ -34,11 +34,10 @@ public class UiManager : MonoBehaviour
             TrashTapHandler tapHandler = obj.GetComponent<TrashTapHandler>();
             if (tapHandler != null) tapHandler.enabled = false;
             sorter.correctBinTag = trash.category.ToString();
-
+            sorter.completionChecker = sortingPanel.GetComponent<SortingCompletionChecker>();
             // ✅ Assign the tag here based on correctBinTag
             obj.tag = sorter.correctBinTag;
             Debug.Log($"Spawning trash: {trash.trashName} | Sprite: {trash.trashSprite?.name} | Category: {trash.category}");
         }
     }
-
 }

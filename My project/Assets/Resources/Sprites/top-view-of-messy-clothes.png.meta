@@ -198,7 +198,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      top-view-of-messy-clothes_0: -5589271897034128884
+      top-view-of-messy-clothes_1: 4098588249404920270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

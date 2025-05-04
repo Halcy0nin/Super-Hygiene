@@ -9,7 +9,7 @@ public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Vector3 startPosition;
     private Transform originalParent;
     private CanvasGroup canvasGroup;
-
+    public SortingCompletionChecker completionChecker;
     private Vector2 inputPosition;
     private InputAction pointerMovementAction;
 
@@ -98,8 +98,8 @@ public class TrashSorter : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (hitBin != null)
         {
             Debug.Log($"✅ Correct bin! {gameObject.name} dropped on {hitBin.name} (Tag: {hitBin.tag})");
-            gameObject.SetActive(false);
-            SortingCompletionChecker.Instance.CheckIfAllSorted();
+            Destroy(gameObject); 
+            completionChecker.CheckIfAllSorted();
         }
         else
         {
