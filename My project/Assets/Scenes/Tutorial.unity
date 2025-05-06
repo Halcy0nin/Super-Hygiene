@@ -2759,7 +2759,6 @@ MonoBehaviour:
   - {fileID: 725984247}
   - {fileID: 1274259558}
   finalTutorialUI: {fileID: 1803993594}
-  nextSceneButton: {fileID: 1280216634}
   gameSelectUI: {fileID: 1670101698}
 --- !u!1 &393513531
 GameObject:
@@ -8560,6 +8559,7 @@ GameObject:
   - component: {fileID: 1280216636}
   - component: {fileID: 1280216635}
   - component: {fileID: 1280216634}
+  - component: {fileID: 1280216637}
   m_Layer: 5
   m_Name: NextStep
   m_TagString: Untagged
@@ -8630,16 +8630,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 773535586}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1280216637}
+        m_TargetAssemblyTypeName: ChangeSceneFromButton, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Main
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1280216635
@@ -8680,6 +8680,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280216632}
   m_CullTransparentMesh: 1
+--- !u!114 &1280216637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280216632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eadde595dfacc134f81f04dbb2bb92f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1291222866
 GameObject:
   m_ObjectHideFlags: 0
@@ -8695,7 +8707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1291222867
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8749,7 +8761,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 4b8865ccd8a301a48a3b41758ff1cb7d, type: 3}
   m_Resource: {fileID: 8300000, guid: 4b8865ccd8a301a48a3b41758ff1cb7d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.51
   m_Pitch: 1
   Loop: 1
   Mute: 0

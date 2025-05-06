@@ -8,7 +8,6 @@ public class TutorialTracker : MonoBehaviour
 
     public Button[] tutorialButtons;
     public GameObject finalTutorialUI;
-    public Button nextSceneButton;
     public GameObject gameSelectUI;
 
     private bool finalUIShown = false;
@@ -48,11 +47,5 @@ public class TutorialTracker : MonoBehaviour
     private void ShowFinalTutorialUI()
     {
         finalTutorialUI.SetActive(true);
-        nextSceneButton.onClick.AddListener(LoadNextScene);
-    }
-
-    private void LoadNextScene()
-    {
-        SceneManager.LoadScene("Main"); // Replace with your target scene name
     }
 }
