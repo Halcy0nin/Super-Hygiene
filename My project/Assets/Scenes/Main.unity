@@ -2672,6 +2672,7 @@ MonoBehaviour:
   - {fileID: 1301847680}
   - {fileID: 967446913}
   proceedButton: {fileID: 1726785250}
+  NextStageButton: {fileID: 1020250138}
 --- !u!1 &576253192
 GameObject:
   m_ObjectHideFlags: 0
@@ -6356,6 +6357,7 @@ MonoBehaviour:
   - {fileID: 352396335}
   - {fileID: 1666509461}
   proceedButton: {fileID: 627730739}
+  NextStageButton: {fileID: 351122306}
 --- !u!4 &1215649018
 Transform:
   m_ObjectHideFlags: 0
@@ -9241,6 +9243,7 @@ MonoBehaviour:
   - {fileID: 98903998}
   - {fileID: 147500679}
   proceedButton: {fileID: 519203338}
+  NextStageButton: {fileID: 730980651}
 --- !u!4 &1854077207
 Transform:
   m_ObjectHideFlags: 0
