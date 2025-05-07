@@ -7,7 +7,7 @@ public class TrashManager : MonoBehaviour
     public GameObject[] trashPrefabs;
     public Transform[] trashSlots;   
     public Button proceedButton;
-
+    public Button NextStageButton;
     private int trashCleaned = 0;
     private int totalTrash = 6;
 
@@ -15,6 +15,7 @@ public class TrashManager : MonoBehaviour
     {
         BootTracer.Log("TrashManager Start()");
         trashCleaned = 0;
+        NextStageButton.onClick.AddListener(() => GameManager.Instance.ClearCollectedTrash());
     }
 
     public void SpawnTrash()
