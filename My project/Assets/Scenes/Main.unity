@@ -2056,7 +2056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &519203337
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3247,7 +3247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &627730738
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6834,7 +6834,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1854077206}
         m_TargetAssemblyTypeName: TrashManager, Assembly-CSharp
-        m_MethodName: TrashPicked
+        m_MethodName: SpawnTrash
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8119,7 +8119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1726785249
 RectTransform:
   m_ObjectHideFlags: 0
