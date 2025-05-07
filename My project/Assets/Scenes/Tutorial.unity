@@ -10491,6 +10491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd7b13ca16ae6f40ab226f1deda98d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TrashContainer: {fileID: 218639873}
   finishSortingButton: {fileID: 846879056}
 --- !u!114 &1679306372
 MonoBehaviour:
