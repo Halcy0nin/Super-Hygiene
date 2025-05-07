@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 63960ce4ae8e1a1418b3bacff07c2bee
+guid: 066712ec2c3060646ae6b8e938f50574
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8722683205363965157
-    second: Super Hygiene App Icon_0
+      213: -5589271897034128884
+    second: top-view-of-messy-clothes_0
+  - first:
+      213: 4098588249404920270
+    second: top-view-of-messy-clothes_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Super Hygiene App Icon_0
+      name: top-view-of-messy-clothes_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 83
+        y: 187
+        width: 860
+        height: 670
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +157,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b13e308e6ddc2f680800000000000000
-      internalID: -8722683205363965157
+      spriteID: c020538a2daee62b0800000000000000
+      internalID: -5589271897034128884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: top-view-of-messy-clothes_1
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 164
+        width: 106
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1de5e2c4c11e830800000000000000
+      internalID: 4098588249404920270
       vertices: []
       indices: 
       edges: []
@@ -173,8 +198,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Super Hygiene App Icon_0: -8722683205363965157
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 63960ce4ae8e1a1418b3bacff07c2bee
+guid: 1651d69fe287f284ea24f6ca271734ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8722683205363965157
-    second: Super Hygiene App Icon_0
+      213: 6372765840644191286
+    second: arrow-up_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Super Hygiene App Icon_0
+      name: arrow-up_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 512
+        width: 799
+        height: 1487
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b13e308e6ddc2f680800000000000000
-      internalID: -8722683205363965157
+      spriteID: 634375884cc907850800000000000000
+      internalID: 6372765840644191286
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Super Hygiene App Icon_0: -8722683205363965157
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
