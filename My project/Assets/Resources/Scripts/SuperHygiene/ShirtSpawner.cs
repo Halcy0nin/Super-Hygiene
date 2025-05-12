@@ -97,4 +97,32 @@ public class ShirtSpawner : MonoBehaviour
             Debug.LogWarning("No button assigned to show.");
         }
     }
+    public void ResetShirtStack()
+    {
+        // Reset counters
+        stackedShirtCount = 0;
+        currentShirtIndex = 0;
+
+        // Destroy all stacked shirts
+        foreach (Transform child in shirtStackParent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        // Destroy the currently active shirt (if needed)
+        if (activeShirt != null)
+        {
+            Destroy(activeShirt);
+            activeShirt = null;
+        }
+
+        // Hide the continue button
+        if (continueButton != null)
+        {
+            continueButton.gameObject.SetActive(false);
+        }
+
+        // Start again
+        SpawnNextShirt();
+    }
 }  

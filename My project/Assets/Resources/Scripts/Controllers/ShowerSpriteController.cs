@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ShowerSpriteController : MonoBehaviour
 {
-    public Sprite[] showerCharacter; // 0 = sleeping, 1 = awake
-    public SpriteRenderer showerSpriteRenderer; // SpriteRenderer component to update
+    public Sprite[] showerCharacter; 
+    public SpriteRenderer showerSpriteRenderer; 
 
     public void ChangeShowerSprite()
     {

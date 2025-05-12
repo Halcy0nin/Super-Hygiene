@@ -1374,6 +1374,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1755220464}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CheckHallCleaned
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &351122307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2792,6 +2804,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1582829633}
+        m_TargetAssemblyTypeName: SuperHygieneUIManager, Assembly-CSharp
+        m_MethodName: OnResettingMask
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 363001497}
+        m_TargetAssemblyTypeName: ShirtSpawner, Assembly-CSharp
+        m_MethodName: ResetShirtStack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &576253195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3667,6 +3703,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1755220464}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CheckClassroomCleaned
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &730980652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4059,6 +4107,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
         m_MethodName: PlayClickSound
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 982016268}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4701,7 +4761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &982016269
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5190,6 +5250,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1755220464}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CheckBedroomCleaned
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7538,6 +7610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirtMask: {fileID: 1988906936}
+  characterMaskController: {fileID: 1988906935}
   continueButton: {fileID: 556314266}
 --- !u!114 &1582829634
 MonoBehaviour:
@@ -7952,7 +8025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1702296171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8313,6 +8386,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectedTrash: []
+  BedroomCleaned: 0
+  HallCleaned: 0
+  ClassroomClean: 0
+  NextGame: {fileID: 1702296170}
 --- !u!224 &1755220465
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9757,6 +9834,8 @@ MonoBehaviour:
   maleMainTex: {fileID: 2800000, guid: a2bc94d17524c2a4e8c90d1a85df1556, type: 3}
   femaleMainTex: {fileID: 2800000, guid: 6ecd1eec567491b4bb39f80026ffd93c, type: 3}
   baseMaterial: {fileID: 2100000, guid: c51e218e63ab3294899cbbad1f387305, type: 2}
+  characterMaterial: {fileID: 0}
+  rawImage: {fileID: 0}
 --- !u!114 &1988906936
 MonoBehaviour:
   m_ObjectHideFlags: 0
