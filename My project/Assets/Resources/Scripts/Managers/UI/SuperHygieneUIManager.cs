@@ -6,6 +6,7 @@ public class SuperHygieneUIManager : MonoBehaviour
 {
 
     public ScratchCardMaskUGUI dirtMask;
+    public CharacterMaskController characterMaskController;
     public Button continueButton; 
     private void CheckBathProgress()
     {
@@ -25,5 +26,11 @@ public class SuperHygieneUIManager : MonoBehaviour
     void Update()
     {
         CheckBathProgress();
+    }
+    public void OnResettingMask()
+    {
+        dirtMask.Restore(); 
+        characterMaskController.ApplyMaskBasedOnGender(); 
+        continueButton.gameObject.SetActive(false); 
     }
 }

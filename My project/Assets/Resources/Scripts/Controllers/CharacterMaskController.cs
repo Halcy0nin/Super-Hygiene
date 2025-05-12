@@ -9,44 +9,32 @@ public class CharacterMaskController : MonoBehaviour
 
     public Material baseMaterial;
 
-    private Material characterMaterial;
-    private RawImage rawImage;
+    public Material characterMaterial;
+    public RawImage rawImage;
     private ScratchCardMaskUGUI scratchCard;
 
     void Start()
     {
+        ApplyMaskBasedOnGender();
+    }
+
+
+    public void ApplyMaskBasedOnGender()
+    {
         rawImage = GetComponent<RawImage>();
         scratchCard = GetComponent<ScratchCardMaskUGUI>();
-
-        if (rawImage == null)
-        {
-            Debug.LogError("RawImage component not found on this GameObject.");
-            return;
-        }
-
-        if (scratchCard == null)
-        {
-            Debug.LogError("ScratchCardMaskUGUI component not found on this GameObject.");
-            return;
-        }
-
         if (baseMaterial != null)
         {
             // Duplicate the material to avoid modifying the original
             characterMaterial = new Material(baseMaterial);
             rawImage.material = characterMaterial;
-
-            ApplyMaskBasedOnGender();
         }
         else
         {
             Debug.LogWarning("Base material is not assigned in the inspector!");
         }
-    }
-
-    public void ApplyMaskBasedOnGender()
-    {
         Debug.Log("ApplyMaskBasedOnGender() called");
+        characterMaterial.SetTexture("_MaskTex", scratchCard.TargetTexture);
 
         if (characterMaterial == null) return;
 
