@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
     
     public List<TrashData> collectedTrash = new List<TrashData>();
 
@@ -20,19 +19,7 @@ public class GameManager : MonoBehaviour
             NextGame.SetActive(true);
         }
     }
-    void Awake()
-    {
-        BootTracer.Log("GameManager Awake()");
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+
 
     public void ClearCollectedTrash()
     {

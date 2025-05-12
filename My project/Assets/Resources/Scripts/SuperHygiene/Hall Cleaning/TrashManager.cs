@@ -7,15 +7,14 @@ public class TrashManager : MonoBehaviour
     public GameObject[] trashPrefabs;
     public Transform[] trashSlots;   
     public Button proceedButton;
-    public Button NextStageButton;
     private int trashCleaned = 0;
     private int totalTrash = 6;
+    public GameManager gameManager;
 
     void Start()
     {
         BootTracer.Log("TrashManager Start()");
         trashCleaned = 0;
-        NextStageButton.onClick.AddListener(() => GameManager.Instance.ClearCollectedTrash());
     }
 
     public void SpawnTrash()
@@ -52,12 +51,13 @@ public class TrashManager : MonoBehaviour
             // Handle the TrashTapHandler and other components
             TrashTapHandler tapHandler = obj.GetComponent<TrashTapHandler>();
             TrashDataHolder holder = obj.GetComponent<TrashDataHolder>();
-
+            
             if (tapHandler != null && holder != null)
             {
                 tapHandler.manager = this;
                 tapHandler.dataHolder = holder;
                 holder.trashData = data;
+                tapHandler.gameManager = gameManager;
             }
             else
             {

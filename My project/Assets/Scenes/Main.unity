@@ -2684,7 +2684,7 @@ MonoBehaviour:
   - {fileID: 1301847680}
   - {fileID: 967446913}
   proceedButton: {fileID: 1726785250}
-  NextStageButton: {fileID: 1020250138}
+  gameManager: {fileID: 1755220464}
 --- !u!1 &576253192
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,6 +3483,7 @@ MonoBehaviour:
   sortingPanel: {fileID: 1855043218}
   trashUIPrefab: {fileID: 260590559625306209, guid: 805356bcf5bc4df438a729924c3cccbc, type: 3}
   trashContainer: {fileID: 275755952}
+  gameManager: {fileID: 1755220464}
 --- !u!114 &724782660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3497,6 +3498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trashUIPrefab: {fileID: 0}
   collectionPanel: {fileID: 1855043219}
+  gameManager: {fileID: 1755220464}
 --- !u!4 &724782661
 Transform:
   m_ObjectHideFlags: 0
@@ -6110,6 +6112,7 @@ MonoBehaviour:
   sortingPanel: {fileID: 996361688}
   trashUIPrefab: {fileID: 260590559625306209, guid: 805356bcf5bc4df438a729924c3cccbc, type: 3}
   trashContainer: {fileID: 451290551}
+  gameManager: {fileID: 1755220464}
 --- !u!4 &1199600226
 Transform:
   m_ObjectHideFlags: 0
@@ -6139,6 +6142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trashUIPrefab: {fileID: 0}
   collectionPanel: {fileID: 996361689}
+  gameManager: {fileID: 1755220464}
 --- !u!1 &1203555594
 GameObject:
   m_ObjectHideFlags: 0
@@ -6429,7 +6433,7 @@ MonoBehaviour:
   - {fileID: 352396335}
   - {fileID: 1666509461}
   proceedButton: {fileID: 627730739}
-  NextStageButton: {fileID: 351122306}
+  gameManager: {fileID: 1755220464}
 --- !u!4 &1215649018
 Transform:
   m_ObjectHideFlags: 0
@@ -9320,7 +9324,7 @@ MonoBehaviour:
   - {fileID: 98903998}
   - {fileID: 147500679}
   proceedButton: {fileID: 519203338}
-  NextStageButton: {fileID: 730980651}
+  gameManager: {fileID: 1755220464}
 --- !u!4 &1854077207
 Transform:
   m_ObjectHideFlags: 0
@@ -9662,6 +9666,7 @@ MonoBehaviour:
   sortingPanel: {fileID: 1402579142}
   trashUIPrefab: {fileID: 260590559625306209, guid: 805356bcf5bc4df438a729924c3cccbc, type: 3}
   trashContainer: {fileID: 1153861844}
+  gameManager: {fileID: 1755220464}
 --- !u!114 &1891869597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9676,6 +9681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trashUIPrefab: {fileID: 0}
   collectionPanel: {fileID: 1402579143}
+  gameManager: {fileID: 1755220464}
 --- !u!4 &1891869598
 Transform:
   m_ObjectHideFlags: 0
