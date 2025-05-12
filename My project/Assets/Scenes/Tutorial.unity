@@ -708,7 +708,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: let me teach you how to fold them!
+  m_text: tupiin natin ang mga damit nang wasto!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -844,7 +844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I have a ton of missions lined up for you! Tap on any to get started!
+  m_text: Tara! Pindutin ang Super Hygiene para matutong maglinis!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -2211,7 +2211,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hi I'm super hygiene!
+  m_text: Kamusta! ako si super hygiene!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -3066,7 +3066,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Awesome! let's sort these out in the right bins!
+  m_text: at pagtatapon nito sa tamang lagayan!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -3376,7 +3376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: you're now ready to become a true healthy hero!
+  m_text: Handa ka na maging isang tunay na healthy hero!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -3718,6 +3718,7 @@ MonoBehaviour:
   - {fileID: 793857641}
   - {fileID: 1605459827}
   proceedButton: {fileID: 1833155176}
+  NextStageButton: {fileID: 0}
 --- !u!4 &569893346
 Transform:
   m_ObjectHideFlags: 0
@@ -6756,7 +6757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Congratulations! your hero training is complete!
+  m_text: Mahusay! tapos na ang iyong training!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -6967,7 +6968,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Healthy heroes know what makes us strong like an ox or weak like an ant!
+  m_text: Ilagay ang masustansya sa berdeng basket, at ang di-masustansya sa pulang
+    basket!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -6994,8 +6996,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25.2
+  m_fontSizeBase: 25.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7635,7 +7637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Looks like super mom left some clothes for you to fold
+  m_text: hala! Mukhang maraming naiwang damit na hindi natupi!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -7903,7 +7905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: let's clean this mess up! tap the trash to collect them!
+  m_text: Linisin ang silid sa pamamagitan ng  pagpulot ng kalat..
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -8039,7 +8041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Put healthy food in green, junk food in red!
+  m_text: Maging matalinong superhero sa pagpili ng pagkain!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -8175,7 +8177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Uh oh! looks like you got dirty after your last adventure
+  m_text: "Tara\u2019t maging Super Hygiene tayo at linisin ang iyong katawan!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
@@ -9622,7 +9624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scrub off the dirt by swiping across the screen until it's all gone!
+  m_text: kuskusin mo ang screen para malinisan ang katawan ng hero mo!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
   m_sharedMaterial: {fileID: -5825568176424061730, guid: 542f5c3a1c9f7f945b12c61dc85cc4dd, type: 2}
