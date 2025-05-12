@@ -3718,6 +3718,7 @@ MonoBehaviour:
   - {fileID: 793857641}
   - {fileID: 1605459827}
   proceedButton: {fileID: 1833155176}
+  NextStageButton: {fileID: 0}
 --- !u!4 &569893346
 Transform:
   m_ObjectHideFlags: 0
@@ -6089,6 +6090,8 @@ MonoBehaviour:
   maleMainTex: {fileID: 2800000, guid: a2bc94d17524c2a4e8c90d1a85df1556, type: 3}
   femaleMainTex: {fileID: 2800000, guid: 6ecd1eec567491b4bb39f80026ffd93c, type: 3}
   baseMaterial: {fileID: 2100000, guid: c51e218e63ab3294899cbbad1f387305, type: 2}
+  characterMaterial: {fileID: 0}
+  rawImage: {fileID: 0}
 --- !u!114 &892952816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8284,6 +8287,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectedTrash: []
+  BedroomCleaned: 0
+  HallCleaned: 0
+  ClassroomClean: 0
+  NextGame: {fileID: 0}
 --- !u!224 &1231595177
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11528,6 +11535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirtMask: {fileID: 892952814}
+  characterMaskController: {fileID: 892952815}
   continueButton: {fileID: 1862638658}
 --- !u!1 &1958457372
 GameObject:
