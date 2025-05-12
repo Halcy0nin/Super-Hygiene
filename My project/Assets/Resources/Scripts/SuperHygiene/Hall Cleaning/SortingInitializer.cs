@@ -5,11 +5,12 @@ public class SortingInitializer : MonoBehaviour
 {
     public GameObject trashUIPrefab;
     public Transform collectionPanel;
+    public GameManager gameManager;
 
     void Start()
     {
         BootTracer.Log("SortingInitializer Start()");
-        foreach (var trash in GameManager.Instance.collectedTrash)
+        foreach (var trash in gameManager.collectedTrash)
         {
             GameObject trashUI = Instantiate(trashUIPrefab, collectionPanel);
             trashUI.GetComponent<Image>().sprite = trash.trashSprite;

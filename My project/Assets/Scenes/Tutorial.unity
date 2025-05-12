@@ -523,6 +523,7 @@ MonoBehaviour:
   sortingPanel: {fileID: 1679306369}
   trashUIPrefab: {fileID: 260590559625306209, guid: 805356bcf5bc4df438a729924c3cccbc, type: 3}
   trashContainer: {fileID: 218639873}
+  gameManager: {fileID: 1231595176}
 --- !u!114 &79609723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trashUIPrefab: {fileID: 0}
   collectionPanel: {fileID: 1679306370}
+  gameManager: {fileID: 1231595176}
 --- !u!4 &79609724
 Transform:
   m_ObjectHideFlags: 0
@@ -3718,7 +3720,7 @@ MonoBehaviour:
   - {fileID: 793857641}
   - {fileID: 1605459827}
   proceedButton: {fileID: 1833155176}
-  NextStageButton: {fileID: 0}
+  gameManager: {fileID: 1231595176}
 --- !u!4 &569893346
 Transform:
   m_ObjectHideFlags: 0
@@ -11417,6 +11419,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1713850407}
         m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
         m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1326897477}
+        m_TargetAssemblyTypeName: ShirtSpawner, Assembly-CSharp
+        m_MethodName: SpawnNextShirt
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

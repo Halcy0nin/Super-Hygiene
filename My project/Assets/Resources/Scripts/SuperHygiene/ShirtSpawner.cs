@@ -24,10 +24,6 @@ public class ShirtSpawner : MonoBehaviour
     private int currentShirtIndex = 0;
     private GameObject activeShirt;
 
-    void Start()
-    {
-        SpawnNextShirt();
-    }
 
 
    public void SpawnNextShirt()

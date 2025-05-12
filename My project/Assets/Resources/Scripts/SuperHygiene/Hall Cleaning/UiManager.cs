@@ -8,6 +8,7 @@ public class UiManager : MonoBehaviour
     public GameObject sortingPanel;
     public GameObject trashUIPrefab;
     public Transform trashContainer;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -22,9 +23,9 @@ public class UiManager : MonoBehaviour
         phase2Group.SetActive(true);
         
 
-        foreach (var trash in GameManager.Instance.collectedTrash)
+        foreach (var trash in gameManager.collectedTrash)
         {
-            GameObject obj = Instantiate(trashUIPrefab, trashContainer); // or appropriate parent
+            GameObject obj = Instantiate(trashUIPrefab, trashContainer);
             obj.transform.localScale = Vector3.one; // 🔥 Important
             obj.GetComponent<RectTransform>().anchoredPosition = Vector2.zero; 
             obj.GetComponent<Image>().sprite = trash.trashSprite;
